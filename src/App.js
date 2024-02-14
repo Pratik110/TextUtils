@@ -19,7 +19,7 @@ function App() {
 
     setTimeout(() => {
       setAlert(null)
-    }, 700
+    }, 1000
     )
   }
   const toggleMode = () => {
@@ -42,7 +42,7 @@ function App() {
         <div className="container my-3">
           <Routes>
             <Route path="/" element={<Textform heading="Enter the text to analyze below" mode={mode} showAlert={showAlert} />} />
-            <Route path="/about" element={<About />} />
+            <Route path="/about" element={<About mode={mode}/>} />
           </Routes>
         </div>
       </Router>
